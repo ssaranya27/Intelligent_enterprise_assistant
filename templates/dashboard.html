@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | EnterpriseAI</title>
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>EnterpriseAI</span>
+
+            </div>
+
+            <!-- MENU -->
+
+            <ul class="sidebar-menu">
+
+                <li class="active">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>AI Chat</span>
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>Chat History</span>
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-ticket"></i>
+
+                    <span>Support Tickets</span>
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </li>
+
+                <li onclick="window.location.href='/logout'">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- MAIN CHAT SECTION -->
+
+        <div class="main-chat">
+
+            <!-- TOP HEADER -->
+
+            <div class="chat-header">
+
+                <div class="header-left">
+
+                    <h2>
+                        Welcome, {{ username }}
+                    </h2>
+
+                    <p>
+                        Enterprise AI IT Support Assistant
+                    </p>
+
+                </div>
+
+                <div class="header-right">
+
+                    <div class="ai-status">
+
+                        <span class="online-dot"></span>
+
+                        AI Online
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CHAT BOX -->
+
+            <div class="chat-box">
+
+                <!-- AI MESSAGE -->
+
+                <div class="bot-message">
+
+                    <strong>EnterpriseAI</strong>
+
+                    <br><br>
+
+                    Hello 👋
+
+                    <br>
+
+                    I'm your AI IT Support Assistant.
+
+                    <br>
+
+                    How can I help you today?
+
+                </div>
+
+            </div>
+
+            <!-- INPUT AREA -->
+
+            <div class="chat-input-area">
+
+                <input type="text"
+                    id="user-input"
+                    placeholder="Describe your issue here...">
+
+                <button onclick="sendMessage()">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
